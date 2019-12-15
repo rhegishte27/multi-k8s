@@ -13,7 +13,7 @@ before_install:
   - gcloud auth activate-service-account --key-file service-account.json  
   - gcloud config set project core-it-services 
   - gcloud config set compute/zone asia-south1-a	
-  - gcloud container clusters get-credentials multi-cluster
+  - gcloud container clusters get-credentials multi-clu
   - echo "$DOCKER_PASSWORD"|docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t changa2127/react-rest -f ./client/Dockerfile.dev ./client
 

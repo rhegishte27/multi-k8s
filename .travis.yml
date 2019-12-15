@@ -15,7 +15,7 @@ before_install:
   - gcloud config set compute/zone asia-south1-a	
   - gcloud container clusters get-credentials multi-clu
   - echo "$DOCKER_PASSWORD"|docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker build -t changa2127/react-rest -f ./client/Dockerfile.dev ./client
+  - docker build -t changa2127/react-test -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run changa2127/react-rest nmp test -- --coverage

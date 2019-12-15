@@ -18,7 +18,7 @@ before_install:
   - docker build -t changa2127/react-test -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run changa2127/react-rest nmp test -- --coverage
+  - docker run changa2127/react-test nmp test -- --coverage
 
 deploy:
   provider: script
